@@ -42,7 +42,7 @@ Android always had limit for transactions via intent. Bunt of version 7.0.0+, th
 - IntentCofiguration.ACCORDING_SIZE : Use library accordin lenth of object
 
 ###Prevent error
-- Is requiered call once a getIntent after startActivity/startActivityForResult . Aflter called, bundle is automatically. 
+- Is requiered call once a getIntent after startActivity/startActivityForResult . Aflter called, bundle cleaned is automatically. 
 
    [TransactionTooLargeException]: <https://developer.android.com/reference/android/os/TransactionTooLargeException.html>
    
