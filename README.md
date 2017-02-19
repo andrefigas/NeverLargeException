@@ -2,6 +2,10 @@
 
 Android always had limit for transactions via intent. Bunt of version 7.0.0+, there is an RunTime Exception that the transaction is overloaded and crashed application: [TransactionTooLargeException]
 
+### Install
+
+compile 'waiting sonatype release'
+
 ### Sending data
 
         public static final String INTENT_KEY = "INTENT_KEY";
