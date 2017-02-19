@@ -1,6 +1,6 @@
 # NeverLargeException
 
-Android always had limit for transactions via intent. Bunt of version 7.0.0+, there is an RunTime Exception that the transaction is overloaded and crashed application: [TransactionTooLargeException]
+Android always had limit for transactions via intent. But on version 7.0.0+, there is an RunTime Exception that the transaction is overloaded and crashed application: [TransactionTooLargeException]
 
 ### Install
 
