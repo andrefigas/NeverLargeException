@@ -12,7 +12,7 @@ Android always had limit for transactions via intent. Bunt of version 7.0.0+, th
 
         SuperIntent superIntent =  new SuperIntent(this, Main2Activity.class);
         IntentTransporter.startActivity(this,
-                superIntent.putSuperExtra(INTENT_KEY,createBigObjecct(1000000))
+                superIntent.putSuperExtra(INTENT_KEY,myObject)
                         //.putSuperExtra(String,value)
                         //.putSuperExtra(Serializable,value)
                         //.putSuperExtra(Percelable,value)
