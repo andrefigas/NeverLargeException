@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+
+    group='devfigas.com.neverlargeexception'
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+uploadArchives {
+    repositories {
+
+        mavenDeployer {
+           repository(url: "http://localhost:8081/repository/NeverTooLargeException/NeverTooLargeException/"){
+                authentication(userName: 'admin', password: 'admin123')
+            }
+ 
+            //repository(url: "file:///C:/Users/Andre/.m2/repository/com/devfigas/NeverLargeException/NeverLargeException")
+
+            pom.groupId = "com.devfigas"
+            pom.artifactId = "NeverLargeException"
+            pom.version = "0.0.8"
+        }
+    }
+}
+task install(dependsOn: uploadArchives)
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    testCompile 'junit:junit:4.12'
+}
