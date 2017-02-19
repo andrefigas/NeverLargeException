@@ -4,7 +4,7 @@ Android always had limit for transactions via intent. Bunt of version 7.0.0+, th
 
 ### Install
 
-compile 'waiting sonatype release'
+        compile 'waiting sonatype release'
 
 ### Sending data
 
